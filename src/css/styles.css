@@ -92,7 +92,7 @@ a {
 
 /* Menu */
 .menu {
-  padding: 5rem;
+  padding: 8rem;
 }
 .menu__header {
   text-align: center;
@@ -109,6 +109,9 @@ a {
 }
 .filter-btn {
   margin-bottom: 6.4rem;
+}
+.btn {
+  text-transform: capitalize;
 }
 .menu__body {
   margin: auto;
@@ -137,6 +140,7 @@ a {
   color: var(--color-heading);
   font-weight: 700;
   white-space: nowrap;
+  text-transform: capitalize;
 }
 .item__price {
   color: var(--color-primary);
@@ -146,6 +150,9 @@ a {
 .item__description {
   padding-top: 1rem;
   text-align: justify;
+}
+.item__description::first-letter {
+  text-transform: uppercase;
 }
 @media screen and (min-width: 768px) {
   .item {
