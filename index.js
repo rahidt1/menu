@@ -83,30 +83,29 @@ const menu = [
 const menuBody = document.querySelector('.menu__body');
 const filterBtn = document.querySelector('.filter-btn');
 
-// Load Items
+// DO: Load Items
 window.addEventListener('DOMContentLoaded', function (){
   displayMenuItems(menu);
   displayBtns(menu);
 });
 
-// Display Unique Button
-// Fetch category, filters them & return button
+// DO: Display Unique Button
+// DO: Fetch category, filters them & return button
 
 function displayBtns(btns){
   let fetchBtn = btns.map( function(btn){
     return btn.category;
 });
-//return unique value
+// DO: return unique value
 let filterUnique = ['all',...new Set(fetchBtn)] 
 let filtered = filterUnique.map(function(item){
   return `<button class="btn" data-id="${item}">${item}</button>`
 }).join('')
 filterBtn.innerHTML = filtered;
-/* As we are adding the button dynamically the we 
-have to querySelect after the buttons are insterset in HTML*/
+/* NOTE: As we are adding the button dynamically the we have to querySelect after the buttons are insterset in HTML*/
 const buttons = document.querySelectorAll('.btn')
 
-// Filter Items
+// DO: Filter Items
 buttons.forEach(function(btn){
   btn.addEventListener('click',function(e){
     const category = e.currentTarget.dataset.id;
@@ -124,7 +123,7 @@ buttons.forEach(function(btn){
 })
 }
 
-// Display Items on the menu
+// DO: Display Items on the menu
 function displayMenuItems(menuItems){
   let displayMenu = menuItems.map( function (item){
     return `

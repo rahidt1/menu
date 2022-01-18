@@ -1,5 +1,5 @@
-src/playground.html
-src/playground.js
+playground.html
+playground.js
 node_modules
 dist
 .parcel-cache
